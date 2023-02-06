@@ -1,18 +1,13 @@
-# ChatBridgeReforged
+# # WARNING
+# **This is a fork repo from lgpl lisense repo, So please be careful if you want to copy it to other places**
+
 
 - only tested for python 3.7 and 3.8
 - python version should be 3.7+
 - `pip install -r requirements.txt` to install requirements!
-- Please give a **star** if you like this repository
-- Preview version at [ChatBridgeReforged_preview](https://github.com/R1ckyH/ChatBridgeReforged/tree/test)
-
-  ![image](./CBR.svg)
-
-## Compare to [ChatBridge](https://github.com/TISUnion/ChatBridge)
-
+- Please give a **star** to the [original repo](https://github.com/R1ckyH/ChatBridgeReforged) if you like this repository
 - use [trio](https://trio.readthedocs.io/) for Asynchronous processing
 - more feature will be release in the future
-- not support to [ChatBridge](https://github.com/TISUnion/ChatBridge) clients in release
 - [Ricky](https://github.com/R1ckyH) is a suck author
   - But he will try his best to maintain this repository
   - Please cheer him so that he will be happy to maintain this repository
@@ -83,5 +78,3 @@ Setup `config.yml` in previous directory and `config/ChatBridgeReforged_MC.json`
 ## Plugin
 
 [Plugin document](./doc/plugin.md)
-
-Plugin Catalogue will launch soon

@@ -10,11 +10,10 @@ from cbr.lib.typeddicts import TypedServerConfig
 from cbr.net.network import Network
 from cbr.net.process import ServerProcess, ClientProcess
 from cbr.plugin.plugin import PluginManager
-from cbr.plugin.rtext import *
 
 
 def rtext_cmd(txt, msg, cmd):
-    return RText(txt).h(msg).c(RAction.suggest_command, cmd)
+    return txt
 
 
 class CBRTCPServer(Network):

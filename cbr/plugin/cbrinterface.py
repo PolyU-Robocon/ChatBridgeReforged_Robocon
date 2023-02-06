@@ -7,7 +7,6 @@ import trio
 from typing import TYPE_CHECKING
 
 from cbr.resources import formatter
-from cbr.plugin.rtext import rtext_json_to_text
 
 if TYPE_CHECKING:
     from cbr.lib.logger import CBRLogger
@@ -141,12 +140,7 @@ class CBRInterface:
             self.__split_log(re.sub("§.", "", str(msg)))
             return
         if self.is_client_online(target):
-            if hasattr(msg, "to_json_str"):
-                if self.is_mc_client(target):
-                    msg = msg.to_json_str()
-                else:
-                    msg = rtext_json_to_text(msg.to_json_str())
-            elif not self.is_mc_client(target):
+            if not self.is_mc_client(target):
                 msg = re.sub("§.", "", msg)
             stream = self._server.clients[target].stream
             trio.from_thread.run(self._server.send_message, stream, self_client, source_player, msg, receiver, target, trio_token=self.__token)
