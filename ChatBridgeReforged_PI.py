@@ -23,9 +23,9 @@ CLIENT_TYPE = "PI"
 client: "CBRTCPClient"
 
 debug_mode = False
-CONFIG_PATH = "config/ChatBridgeReforged_MC.json"
-LOG_PATH = "logs/ChatBridgeReforged_MC.log"
-CHAT_PATH = "logs/ChatBridgeReforged_MC_chat.log"
+CONFIG_PATH = "config/ChatBridgeReforged_PI.json"
+LOG_PATH = "logs/ChatBridgeReforged_PI.log"
+CHAT_PATH = "logs/ChatBridgeReforged_PI_chat.log"
 SIZE_TO_ZIP = 512  # kb
 SIZE_TO_ZIP_CHAT = 512  # kb
 DISABLE_CHAT_LOG = True
@@ -39,13 +39,10 @@ wait_time = [5, 10, 30, 60, 120, 300, 600, 1200, 1800, 3600]
 PLUGIN_METADATA = {
     "id": "chatbridgereforged_mc",
     "version": "0.3.0-dev033-PI",
-    "name": "ChatBridgeReforged_MC",
+    "name": "ChatBridgeReforged_PI",
     "description": "Reforged of ChatBridge, Client for normal PI server.",
     "author": "ricky",
-    "link": "https://github.com/R1ckyH/ChatBridgeReforged",
-    "dependencies": {
-        "mcdreforged": ">=1.3.0"  # or ~=0.9
-    }
+    "link": "https://github.com/R1ckyH/ChatBridgeReforged"
 }
 
 DEFAULT_CONFIG = {
@@ -58,7 +55,7 @@ DEFAULT_CONFIG = {
 
 
 def rtext_cmd(txt, msg, cmd):
-    return RText(txt).h(msg).c(RAction.run_command, cmd)
+    return txt
 
 
 def help_formatter(mcdr_prefix, command, first_msg, click_msg, use_command=None):
